@@ -2,7 +2,7 @@
   "name": "deline",
   "version": "1.0.0",
   "description": "Template tag that takes out unwanted newlines",
-  "main": "dist/deline.js",
+  "main": "deline.js",
   "scripts": {
     "test": "npm run --silent lint && jest",
     "lint": "eslint deline __tests__",
@@ -32,8 +32,6 @@
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.2.2",
     "eslint-plugin-react": "^6.3.0",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
     "jest-cli": "^16.0.0"
   },
   "jest": {
