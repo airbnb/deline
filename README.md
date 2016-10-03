@@ -41,6 +41,10 @@ Wait! Actually, we really want two newlines above this part. Otherwise it will l
 Also, deline can also be used as a function. Neat!
 ```
 
+## Acknowledgements
+
+Deline is inspired by, and based on, the [dedent](https://github.com/dmnd/dedent) package. Thanks [@dmnd](https://github.com/dmnd)!
+
 ## License
 
 MIT
