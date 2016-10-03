@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run --silent lint && jest",
     "lint": "eslint deline __tests__",
-    "prepublish": "npm run --silent test && gulp"
+    "prepublish": "npm run --silent test"
   },
   "repository": {
     "type": "git",
