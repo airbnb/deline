@@ -4,7 +4,7 @@
     "node": true,
     "es6": true
   },
-  "extends": "airbnb",
+  "extends": "airbnb-base",
   "rules": {
     "no-plusplus": 0
   }
