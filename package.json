@@ -1,0 +1,42 @@
+{
+  "name": "deline",
+  "version": "1.0.0",
+  "description": "Template tag that takes out unwanted newlines",
+  "main": "dist/deline.js",
+  "scripts": {
+    "test": "npm run --silent lint && jest",
+    "lint": "eslint deline __tests__"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sibnerian/deline.git"
+  },
+  "keywords": [
+    "deline",
+    "tag",
+    "es6",
+    "multi-line",
+    "string"
+  ],
+  "author": "Ian Sibner <sibnerian@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sibnerian/deline/issues"
+  },
+  "homepage": "https://github.com/sibnerian/deline#readme",
+  "devDependencies": {
+    "eslint": "^3.7.0",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.3.0",
+    "babel-jest": "^16.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "jest-cli": "^16.0.0"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js|json)$"
+  }
+}
