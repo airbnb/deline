@@ -5,9 +5,9 @@
   "main": "deline.js",
   "scripts": {
     "pretest": "npm run --silent lint",
-    "test": "jest",
-    "lint": "eslint deline __tests__",
-    "prepublish": "npm run --silent test"
+    "test": "npm run tests-only",
+    "tests-only": "jest",
+    "lint": "eslint deline __tests__"
   },
   "repository": {
     "type": "git",
