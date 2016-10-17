@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/sibnerian/deline.git"
+    "url": "git://github.com/airbnb/deline.git"
   },
   "keywords": [
     "deline",
@@ -22,9 +22,9 @@
   "author": "Ian Sibner <sibnerian@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sibnerian/deline/issues"
+    "url": "https://github.com/airbnb/deline/issues"
   },
-  "homepage": "https://github.com/sibnerian/deline#readme",
+  "homepage": "https://github.com/airbnb/deline#readme",
   "devDependencies": {
     "babel-jest": "^16.0.0",
     "babel-preset-airbnb": "^2.1.1",
