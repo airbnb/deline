@@ -1,21 +1,23 @@
-/* global jest, describe, it, expect */
-/* eslint-disable no-multiple-empty-lines */
+/* eslint-env mocha */
+/* eslint-disable no-multiple-empty-lines, import/no-extraneous-dependencies */
 
-const deline = require('../deline');
+import { expect } from 'chai';
+
+import deline from '../deline';
 
 describe('deline', () => {
   it('works without interpolation', () => {
     const result = deline`some
       text with
       newlines`;
-    expect(result).toBe('some text with newlines');
+    expect(result).to.eql('some text with newlines');
   });
 
   it('works with interpolation', () => {
     const result = deline`first ${'line'}
                       ${'second'}
                       third`;
-    expect(result).toBe('first line second third');
+    expect(result).to.eql('first line second third');
   });
 
   it('works with blank first line', () => {
@@ -24,7 +26,7 @@ describe('deline', () => {
       dolor sit amit
     `;
 
-    expect(result).toBe('Lorem ipsum dolor sit amit');
+    expect(result).to.eql('Lorem ipsum dolor sit amit');
   });
 
   it('works with multiple blank first lines', () => {
@@ -33,7 +35,7 @@ describe('deline', () => {
                     first
                     second
                     third`;
-    expect(result).toBe('first second third');
+    expect(result).to.eql('first second third');
   });
 
   it('turns a double newline into a single newline', () => {
@@ -42,7 +44,7 @@ describe('deline', () => {
 
       my dudes
     `;
-    expect(result).toBe('It is wednesday\nmy dudes');
+    expect(result).to.eql('It is wednesday\nmy dudes');
   });
 
   it('turns more than 2 newlines into a single newline', () => {
@@ -56,7 +58,7 @@ describe('deline', () => {
 
       my dudes
     `;
-    expect(result).toBe('It is wednesday\nmy dudes');
+    expect(result).to.eql('It is wednesday\nmy dudes');
   });
 
   describe('single line input', () => {
@@ -64,20 +66,20 @@ describe('deline', () => {
 
     it('works with single line input', () => {
       const result = deline`A single line of input.`;
-      expect(result).toBe(expected);
+      expect(result).to.eql(expected);
     });
 
     it('works with single line and closing backtick on newline', () => {
       const result = deline`
         A single line of input.
       `;
-      expect(result).toBe(expected);
+      expect(result).to.eql(expected);
     });
 
     it('works with single line and inline closing backtick', () => {
       const result = deline`
         A single line of input.`;
-      expect(result).toBe(expected);
+      expect(result).to.eql(expected);
     });
   });
 
@@ -85,17 +87,17 @@ describe('deline', () => {
     const arg = `
       A test argument.
     `;
-    expect(deline(arg)).toBe('A test argument.');
+    expect(deline(arg)).to.eql('A test argument.');
   });
 
   it('escapes backticks', () => {
-    expect(deline`\``).toBe('`');
+    expect(deline`\``).to.eql('`');
   });
 
   it('doesn’t strip exlicit newlines', () => {
     const result = deline`
       <p>Hello world!</p>\n
     `;
-    expect(result).toBe('<p>Hello world!</p>\n');
+    expect(result).to.eql('<p>Hello world!</p>\n');
   });
 });

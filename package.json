@@ -6,7 +6,7 @@
   "scripts": {
     "pretest": "npm run --silent lint",
     "test": "npm run tests-only",
-    "tests-only": "jest",
+    "tests-only": "mocha --compilers js:babel-register",
     "lint": "eslint deline __tests__"
   },
   "repository": {
@@ -27,17 +27,13 @@
   },
   "homepage": "https://github.com/airbnb/deline#readme",
   "devDependencies": {
-    "babel-jest": "^16.0.0",
     "babel-preset-airbnb": "^2.1.1",
+    "babel-register": "^6.16.3",
+    "chai": "^3.5.0",
     "eslint": "^3.8.1",
     "eslint-config-airbnb-base": "^9.0.0",
     "eslint-plugin-import": "^2.0.1",
-    "jest-cli": "^16.0.0"
+    "mocha": "^3.1.2"
   },
-  "jest": {
-    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js|json)$"
-  },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
