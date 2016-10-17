@@ -1,6 +1,6 @@
 {
   "name": "deline",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Template tag that takes out unwanted newlines",
   "main": "deline.js",
   "scripts": {
