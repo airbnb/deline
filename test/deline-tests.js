@@ -1,6 +1,3 @@
-/* eslint-env mocha */
-/* eslint-disable no-multiple-empty-lines, import/no-extraneous-dependencies */
-
 import { expect } from 'chai';
 
 import deline from '../deline';

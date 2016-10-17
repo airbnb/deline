@@ -6,8 +6,8 @@
   "scripts": {
     "pretest": "npm run --silent lint",
     "test": "npm run tests-only",
-    "tests-only": "mocha --compilers js:babel-register",
-    "lint": "eslint deline __tests__"
+    "tests-only": "mocha",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
