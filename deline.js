@@ -31,6 +31,4 @@ function deline(strings, ...values) {
   return ret.join('').trim().replace(/\\n/g, '\n');
 }
 
-if (typeof module !== 'undefined') {
-  module.exports = deline;
-}
+module.exports = deline;
