@@ -2,12 +2,15 @@
   "name": "deline",
   "version": "1.0.2",
   "description": "Template tag that takes out unwanted newlines",
-  "main": "deline.js",
+  "main": "build/deline.js",
   "scripts": {
-    "pretest": "npm run --silent lint",
+    "pretest": "npm run --silent lint && npm run build",
     "test": "npm run tests-only",
     "tests-only": "mocha",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build": "mkdir -p build && babel deline.js --out-file build/deline.js --source-maps",
+    "prepublish": "npm run build",
+    "clean": "rm -rf build"
   },
   "repository": {
     "type": "git",
@@ -27,6 +30,7 @@
   },
   "homepage": "https://github.com/airbnb/deline#readme",
   "devDependencies": {
+    "babel-cli": "^6.18.0",
     "babel-preset-airbnb": "^2.1.1",
     "babel-register": "^6.16.3",
     "chai": "^3.5.0",

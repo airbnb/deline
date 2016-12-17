@@ -1,6 +1,7 @@
 import { expect } from 'chai';
 
-import deline from '../deline';
+// eslint-disable-next-line import/no-unresolved, import/extensions
+import deline from '../build/deline';
 
 describe('deline', () => {
   it('works without interpolation', () => {
