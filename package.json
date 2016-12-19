@@ -8,9 +8,9 @@
     "test": "npm run tests-only",
     "tests-only": "mocha",
     "lint": "eslint .",
-    "build": "mkdir -p build && babel deline.js --out-file build/deline.js --source-maps",
+    "build": "mkdirp build && babel deline.js --out-file build/deline.js --source-maps",
     "prepublish": "npm run build",
-    "clean": "rm -rf build"
+    "clean": "rimraf build"
   },
   "repository": {
     "type": "git",
@@ -32,12 +32,14 @@
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-airbnb": "^2.1.1",
-    "babel-register": "^6.16.3",
+    "babel-register": "^6.18.0",
     "chai": "^3.5.0",
-    "eslint": "^3.8.1",
-    "eslint-config-airbnb-base": "^9.0.0",
-    "eslint-plugin-import": "^2.0.1",
-    "mocha": "^3.1.2"
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb-base": "^11.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "mkdirp": "^0.5.1",
+    "mocha": "^3.2.0",
+    "rimraf": "^2.5.4"
   },
   "dependencies": {}
 }
