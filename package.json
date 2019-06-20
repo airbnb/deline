@@ -6,6 +6,7 @@
   "scripts": {
     "pretest": "npm run --silent lint && npm run build",
     "test": "npm run tests-only",
+    "posttest": "npx aud",
     "tests-only": "mocha",
     "lint": "eslint .",
     "build": "mkdirp build && babel deline.js --out-file build/deline.js --source-maps",
