@@ -3,7 +3,7 @@ function deline(strings, ...values) {
   if (typeof strings === 'string') {
     raw = [strings];
   } else {
-    raw = strings.raw;
+    ({ raw } = strings);
   }
   const resultArr = [];
   for (let i = 0; i < raw.length; i++) {
